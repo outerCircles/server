@@ -12,6 +12,13 @@ io.on('connection', socket => {
 
 const port = process.env.PORT;
 
+app.get('/', (req, res) => {
+    res.send(
+        `<h1>Server is running at port: ${port}</h1>`
+    )
+})
+
+
 http.listen(port, ()=>{
     console.log(`server listening on port: ${port}`);
 })
